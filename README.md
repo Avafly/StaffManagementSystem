@@ -19,31 +19,35 @@ A simple staff management system without UI.
 
 ## Demo
 
+### Exit system
+
+<img src="./images/exit.jpeg" alt="exit" width="700" />
+
 ### Show staff
 
-<img src="./images/ex_exit.jpeg" alt="exit" width="700" />
+<img src="./images/show.jpeg" alt="show" width="700" />
 
 ### Add staff
 
-<img src="./images/ex_add.jpeg" alt="add" width="700" />
+<img src="./images/add.jpeg" alt="add" width="700" />
 
 ### Delete staff
 
-<img src="./images/ex_delete.jpeg" alt="delete" width="700" />
+<img src="./images/delete.jpeg" alt="delete" width="700" />
 
 ### Edit staff
 
-<img src="./images/ex_edit.jpeg" alt="edit" width="700" />
+<img src="./images/edit.jpeg" alt="edit" width="700" />
 
 ### Retrieve staff
 
-<img src="./images/ex_retrieve.jpeg" alt="retrieve" width="700" />
+<img src="./images/retrieve.jpeg" alt="retrieve" width="700" />
 
 ### Sort staff
 
-<img src="./images/ex_sort.jpeg" alt="sort" width="700" />
+<img src="./images/sort.jpeg" alt="sort" width="700" />
 
 ### Clear CSV file
 
-<img src="./images/ex_clear.jpeg" alt="clear" width="700" />
+<img src="./images/clear.jpeg" alt="clear" width="700" />
 
