@@ -20,7 +20,7 @@ Employee::Employee(int ID, int deptID, std::string name) {
 
 // show employee info
 void Employee::ShowInfo() {
-    std::cout << std::left << std::setw(10) << this->ID << std::setw(15) << "Employee" << this->name << std::endl;
+    std::cout << std::left << std::setw(10) << this->ID << std::setw(15) << this->getDeptName() << this->name << std::endl;
 }
 
 std::string Employee::getDeptName() {

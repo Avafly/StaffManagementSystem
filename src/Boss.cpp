@@ -23,9 +23,9 @@ void Boss::ShowInfo() {
 //    std::cout << "Staff ID: " << this->ID << " | "
 //              << "Staff Name: " << this->name << " | "
 //              << "Staff Department: " << this->getDeptName() << std::endl;
-    std::cout << std::left << std::setw(10) << this->ID << std::setw(15) << "Boss" << this->name << std::endl;
+    std::cout << std::left << std::setw(10) << this->ID << std::setw(15) << this->getDeptName() << this->name << std::endl;
 }
 
 std::string Boss::getDeptName() {
-    return std::string("Employee");
+    return std::string("Boss");
 }

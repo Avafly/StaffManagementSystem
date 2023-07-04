@@ -20,7 +20,7 @@ Manager::Manager(int ID, int deptID, std::string name) {
 
 // show Manager info
 void Manager::ShowInfo() {
-    std::cout << std::left << std::setw(10) << this->ID << std::setw(15) << "Manager" << this->name << std::endl;
+    std::cout << std::left << std::setw(10) << this->ID << std::setw(15) << this->getDeptName() << this->name << std::endl;
 }
 
 std::string Manager::getDeptName() {
