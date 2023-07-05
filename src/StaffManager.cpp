@@ -120,8 +120,11 @@ void StaffManager::AddStaff() {
         // add new staff to vector
         this->staffVec.push_back(newStaff);
         this->Save();
-        std::cout << "\n** The staff has been added successfully **\n" << std::endl;
+        std::cout << "\n** The staff has been added successfully **" << std::endl;
     }
+    
+    std::cout << "Press any key to continue..." << std::endl;
+    getchar();
 }
 
 // save staff info to file
@@ -181,13 +184,15 @@ void StaffManager::ShowStaff() {
     for(const auto &staff : this->staffVec) {
         staff->ShowInfo();
     }
-    std::cout << "-----------------------------------\n" << std::endl;
+    std::cout << "-----------------------------------" << std::endl;
+    std::cout << "Press any key to continue..." << std::endl;
+    getchar();
 }
 
 // delete staff
 void StaffManager::DeleteStaff() {
     if(this->staffVec.empty()) { // no staff available for deletion
-        std::cout << "\n** Staff list is currently empty **\n" << std::endl;
+        std::cout << "\n** Staff list is currently empty **" << std::endl;
     }
     else {
         int delID;
@@ -215,12 +220,14 @@ void StaffManager::DeleteStaff() {
             this->staffVec.erase(this->staffVec.begin() + index);
             // sync data to file
             this->Save();
-            std::cout << "\n** The staff has been deleted successfully **\n" << std::endl;
+            std::cout << "\n** The staff has been deleted successfully **" << std::endl;
         }
         else {
-            std::cout << "\n** This staff was not found **\n" << std::endl;
+            std::cout << "\n** This staff was not found **" << std::endl;
         }
     }
+    std::cout << "Press any key to continue..." << std::endl;
+    getchar();
 }
 
 // check staff if exists
@@ -239,7 +246,7 @@ int StaffManager::IsStaffExist(int ID) {
 // edit staff info
 void StaffManager::EditStaff() {
     if(this->staffVec.empty()) { // no staff available for editing
-        std::cout << "\n** Staff list is currently empty **\n" << std::endl;
+        std::cout << "\n** Staff list is currently empty **" << std::endl;
     }
     else {
         int editID;
@@ -291,19 +298,21 @@ void StaffManager::EditStaff() {
                 // sync data to file
                 this->Save();
                 
-                std::cout << "\n** The staff info has been edited successfully **\n" << std::endl;
+                std::cout << "\n** The staff info has been edited successfully **" << std::endl;
             }
         }
         else {
-            std::cout << "\n** This staff was not found **\n" << std::endl;
+            std::cout << "\n** This staff was not found **" << std::endl;
         }
     }
+    std::cout << "Press any key to continue..." << std::endl;
+    getchar();
 }
 
 // retrieve staff info
 void StaffManager::RetrieveStaff() {
     if(this->staffVec.empty()) { // no staff available for searching
-        std::cout << "\n** Staff list is currently empty **\n" << std::endl;
+        std::cout << "\n** Staff list is currently empty **" << std::endl;
     }
     else {
         std::cout << "Select search method" << std::endl;
@@ -344,10 +353,10 @@ void StaffManager::RetrieveStaff() {
                 std::cout << "-----------------------------------" << std::endl;
                 std::cout << std::left << std::setw(10) << "ID" << std::setw(15) << "Department" << "Name" << std::endl;
                 this->staffVec[index]->ShowInfo();
-                std::cout << "-----------------------------------\n" << std::endl;
+                std::cout << "-----------------------------------" << std::endl;
             }
             else {
-                std::cout << "\n** '" << ID << "' was not found **\n" << std::endl;
+                std::cout << "\n** '" << ID << "' was not found **" << std::endl;
             }
         }
         else {
@@ -372,19 +381,21 @@ void StaffManager::RetrieveStaff() {
                 for(auto &staff : tmp) {
                     staff->ShowInfo();
                 }
-                std::cout << "-----------------------------------\n" << std::endl;
+                std::cout << "-----------------------------------" << std::endl;
             }
             else {
-                std::cout << "\n** '" << name << "' was not found **\n" << std::endl;
+                std::cout << "\n** '" << name << "' was not found **" << std::endl;
             }
         }
     }
+    std::cout << "Press any key to continue..." << std::endl;
+    getchar();
 }
 
 // sort staff by ID
 void StaffManager::SortStaff() {
     if(this->staffVec.empty()) { // no staff available for sorting
-        std::cout << "\n** Staff list is currently empty **\n" << std::endl;
+        std::cout << "\n** Staff list is currently empty **" << std::endl;
     }
     else {
         std::cout << "Select sorting method" << std::endl;
@@ -414,8 +425,10 @@ void StaffManager::SortStaff() {
             });
         }
         this->Save();
-        std::cout << "\n** Staffs has been sorted successfully **\n" << std::endl;
+        std::cout << "\n** Staffs has been sorted successfully **" << std::endl;
     }
+    std::cout << "Press any key to continue..." << std::endl;
+    getchar();
 }
 
 // clear file
